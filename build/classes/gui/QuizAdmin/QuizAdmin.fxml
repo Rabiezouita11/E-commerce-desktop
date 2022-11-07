@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.QuizAdmin.QuizAdminController">
+   <children>
+      <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="pnlCustomer" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlOrders" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlMenus" prefHeight="200.0" prefWidth="200.0" />
+            <Pane fx:id="pnlOverview" prefHeight="554.0" prefWidth="793.0">
+               <children>
+                  <Label fx:id="welcome" layoutX="57.0" layoutY="25.0" textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="studentsTable" layoutX="3.0" layoutY="362.0" onMouseClicked="#getSelected" prefHeight="200.0" prefWidth="778.0">
+                    <columns>
+                      <TableColumn fx:id="idCol" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="76.0" text="id" />
+                        <TableColumn fx:id="coltitre" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="271.0" text="titre quiz" />
+                        <TableColumn fx:id="coloption2" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="98.0" text="option2" />
+                        <TableColumn fx:id="coloption3" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="123.0" text="option3" />
+                        <TableColumn fx:id="colobonnereponse" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="97.0" text="bonne reponse" />
+                      <TableColumn fx:id="coloption1" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="112.0" text="option1" />
+                    </columns>
+                  </TableView>
+                  <TextField fx:id="id" editable="false" layoutX="239.0" layoutY="162.0" prefHeight="42.0" prefWidth="194.0" visible="false" />
+                  <TextField fx:id="txttitre" layoutX="310.0" layoutY="61.0" prefHeight="42.0" prefWidth="217.0" />
+                  <Label layoutX="153.0" layoutY="61.0" text="Titre quiz" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="addd11" layoutX="608.0" layoutY="132.0" mnemonicParsing="false" onAction="#delete" style="-fx-background-color: RED;" text="Supprimer" textFill="#fff7f7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addd" layoutX="608.0" layoutY="67.0" mnemonicParsing="false" onAction="#add" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: green;" text="Ajouter" textFill="#fff7f7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addd1" layoutX="608.0" layoutY="204.0" mnemonicParsing="false" onAction="#update" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: blue;" text="Modifier" textFill="#fff7f7">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="validationcat" layoutX="178.0" layoutY="269.0" textFill="RED">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="25.0" text="Quiz" textFill="#f8f8f8">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtoption1" layoutX="310.0" layoutY="126.0" prefHeight="42.0" prefWidth="217.0" />
+                  <TextField fx:id="txtoption2" layoutX="310.0" layoutY="186.0" prefHeight="42.0" prefWidth="217.0" />
+                  <TextField fx:id="txtoption3" layoutX="310.0" layoutY="248.0" prefHeight="42.0" prefWidth="217.0" />
+                  <Label layoutX="165.0" layoutY="126.0" text="option 1" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="183.0" text="option 2" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="165.0" layoutY="248.0" text="option 3" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="107.0" layoutY="301.0" text="bonne reponse" textFill="WHITE">
+                     <font>
+                        <Font size="29.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtbonnereponse" layoutX="310.0" layoutY="302.0" prefHeight="42.0" prefWidth="217.0" />
+                  <Button fx:id="addd12" layoutX="608.0" layoutY="269.0" mnemonicParsing="false" onAction="#reset" prefHeight="31.0" prefWidth="89.0" style="-fx-background-color: yellow;" text="reset">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="258.0" style="-fx-background-color: white1F;">
+         <children>
+            <ImageView fx:id="image" fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="nom" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Accueil" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Accueil" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnOverview1" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Quiz" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Quiz" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCustomers11" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Promotion" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Promotion">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnOrders" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#categorie" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Categories">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Open_Envelope_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCustomers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Produit" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Produits">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Person_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnMenus" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Client" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Client">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Xbox_Menu_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnPackages" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Commande" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Commande">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSettings" alignment="BASELINE_LEFT" disable="true" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Livreur" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Livreur">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSettings1" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#Contact" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Contact">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Slider__32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#btnSignout" prefHeight="42.0" prefWidth="259.0" stylesheets="@../homeAdmin/style.css" text="Sign Out">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

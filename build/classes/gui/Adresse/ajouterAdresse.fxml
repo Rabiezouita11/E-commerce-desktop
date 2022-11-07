@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="544.0" prefWidth="600.0" style="-fx-background-color: #8d8686;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Adresse.AjouterAdresseController">
+   <children>
+      <Label layoutX="190.0" layoutY="43.0" text="Ajouter adresse" textFill="WHITE">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="159.0" text="Code postale" textFill="#fcfcfc">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="206.0" text="Rue" textFill="#fcfcfc">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="262.0" text="numero boite lettre" textFill="#fcfcfc">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="146.0" layoutY="316.0" text="ville" textFill="#fcfcfc">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtcodepostale" layoutX="293.0" layoutY="159.0" prefHeight="38.0" prefWidth="234.0" />
+      <TextField fx:id="txtrue" layoutX="293.0" layoutY="206.0" prefHeight="38.0" prefWidth="234.0" />
+      <TextField fx:id="txtnumero" layoutX="293.0" layoutY="262.0" prefHeight="38.0" prefWidth="234.0" />
+      <TextField fx:id="txtville" layoutX="293.0" layoutY="316.0" prefHeight="38.0" prefWidth="234.0" />
+      <Button layoutX="337.0" layoutY="426.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: green;" text="Ajouter">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="168.0" layoutY="426.0" mnemonicParsing="false" onAction="#annuler" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: red;" text="Annuler">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

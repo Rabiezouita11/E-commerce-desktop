@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="parentContainer" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="slide.Slide1Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="343.0" prefWidth="1043.0">
+         <styleClass>
+            <String fx:value="border" />
+            <String fx:value="border-1" />
+         </styleClass>
+         <children>
+            <StackPane prefHeight="215.0" prefWidth="521.0" fx:id="xx">
+               <children>
+                  <AnchorPane fx:id="anchorRoot" prefHeight="498.0" prefWidth="1012.0">
+                     <children>
+                        <ImageView fitHeight="295.0" fitWidth="606.0" layoutX="26.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ffba5ee7e8154ee9f458987d68c9a545c24edf45_asus-tuf-site%20(1).jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="296.0" layoutY="268.0" mnemonicParsing="false" onAction="#load" style="-fx-background-color: green;" text="Next" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </children>
+</StackPane>

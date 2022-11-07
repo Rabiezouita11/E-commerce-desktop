@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="754.0" style="-fx-background-color: whiite;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Paiment.PaimentController">
+   <children>
+      <Label layoutX="250.0" layoutY="49.0" text="Make  paiment">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="147.0" text="Type de paiment">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="282.0" layoutY="146.0" text="En cache">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="205.0" text="votre adresse">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="263.0" text="code postale">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="136.0" layoutY="323.0" text="rue">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtcodepostale" disable="true" layoutX="268.0" layoutY="259.0" prefHeight="36.0" prefWidth="211.0" />
+      <TextField fx:id="txtrue" disable="true" layoutX="268.0" layoutY="319.0" prefHeight="36.0" prefWidth="211.0" />
+      <ComboBox fx:id="adress" layoutX="268.0" layoutY="204.0" onAction="#adresse" prefHeight="31.0" prefWidth="211.0" />
+      <Label layoutX="66.0" layoutY="387.0" text="numero boite lettre">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtnumero" disable="true" layoutX="268.0" layoutY="383.0" prefHeight="36.0" prefWidth="211.0" />
+      <Button layoutX="187.0" layoutY="552.0" mnemonicParsing="false" onAction="#Paiment" style="-fx-background-color: green;" text="Paiment">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="389.0" layoutY="552.0" mnemonicParsing="false" onAction="#retour" style="-fx-background-color: yellow;" text="Retour">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

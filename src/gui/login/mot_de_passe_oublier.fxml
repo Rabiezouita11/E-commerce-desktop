@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="408.0" prefWidth="488.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.login.Mot_de_passe_oublierController">
+   <children>
+      <Label layoutX="12.0" layoutY="197.0" text="Email">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="12.0" layoutY="243.0" prefHeight="55.0" prefWidth="464.0" />
+      <Label layoutX="23.0" layoutY="58.0" text="Mot de passe oublié ? Aucun problème. ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="88.0" text="indiquez-nous simplement votre adresse e-mail et ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="118.0" text="nous vous enverrons votre mot de passe par e-mail">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="148.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnemail" prefHeight="39.0" prefWidth="193.0" style="-fx-background-color: red;" text="Email password link">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="msg" layoutX="37.0" layoutY="169.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="grren" layoutX="19.0" layoutY="168.0" textFill="#15ff00">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="206.0" layoutY="14.0" mnemonicParsing="false" onAction="#home" style="-fx-background-color: green;" text="Accueil">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

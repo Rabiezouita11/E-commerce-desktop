@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.PointLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="582.0" prefWidth="541.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.register.RegisterController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="72.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="206.0" fitWidth="230.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/mm.png" />
+               </image>
+            </ImageView>
+            <PointLight color="CHARTREUSE" layoutX="138.0" layoutY="107.0" lightOn="true" />
+            <ImageView fitHeight="187.0" fitWidth="162.0" layoutX="34.0" layoutY="169.0">
+               <image>
+                  <Image url="@../../img/mm.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="582.0" prefWidth="382.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#404040" layoutX="47.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Registration" wrappingWidth="206.24869537353516">
+               <font>
+                  <Font name="Wingdings 3" size="27.0" />
+               </font>
+            </Text>
+            <TextField fx:id="firstName" layoutX="75.0" layoutY="59.0" prefHeight="25.0" prefWidth="202.0" promptText="First Name" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="lastName" layoutX="75.0" layoutY="132.0" prefHeight="25.0" prefWidth="202.0" promptText="Last Name" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="confirmpassword" layoutX="75.0" layoutY="252.0" prefHeight="25.0" prefWidth="202.0" promptText="confirm password" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+            <Button fx:id="registerButton" layoutX="138.0" layoutY="386.0" mnemonicParsing="false" onAction="#register" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px;" text="Submit" textFill="WHITE">
+              </Button>
+            <Text fill="#404040" layoutX="92.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account? Login">
+               
+            </Text>
+            <Button fx:id="registerButton1" layoutX="138.0" layoutY="507.0" mnemonicParsing="false" onAction="#login" prefHeight="32.0" prefWidth="76.0" style="-fx-background-color: #404040; -fx-background-radius: 0px;" text="Login" textFill="WHITE">
+              
+            </Button>
+            <TextField fx:id="cin" layoutX="75.0" layoutY="170.0" prefHeight="25.0" prefWidth="202.0" promptText="cin" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField fx:id="password1" layoutX="75.0" layoutY="214.0" prefHeight="25.0" prefWidth="202.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+            <AmbientLight color="CHARTREUSE" layoutX="38.0" layoutY="133.0" lightOn="true" />
+            <Button fx:id="uploid" layoutX="75.0" layoutY="302.0" mnemonicParsing="false" onAction="#uploidimage" prefHeight="25.0" prefWidth="202.0" text="uploid image" />
+            <TextField fx:id="email" layoutX="75.0" layoutY="97.0" prefHeight="25.0" prefWidth="202.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #404040; -fx-border-width: 0px 0px 2px 0px;" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

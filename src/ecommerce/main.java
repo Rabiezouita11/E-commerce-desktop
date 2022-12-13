@@ -73,7 +73,7 @@ public class main extends Application {
                 String id = new Jwt(aaa).getAudience();
                 String role = new Jwt(aaa).getSubject();
                 //   System.out.println(aaa);
-                if (role.equals("Client")) {
+                if (role.equals("user")) {
 
                     //   System.out.println(id);
                     //  System.out.println(role);

@@ -255,7 +255,7 @@ public class Categorie_ClientController implements Initializable {
             fruit.setImage(queryoutput.getString("image"));
             fruit.setPromotion(queryoutput.getString("promotion"));
             InterCategorie deptdao = daocategorie.getInstance();
-            fruit.setCat(deptdao.findcatById(queryoutput.getInt("categorie")));
+            fruit.setCat(deptdao.findcatById(queryoutput.getInt("id_categorie")));
             fruit.setDate(queryoutput.getString("date_exp"));
             fruit.setPrixold(queryoutput.getInt("prixold"));
             fruits.add(fruit);
@@ -387,7 +387,9 @@ public class Categorie_ClientController implements Initializable {
         try {
             countnoter(fruit.getId());
             float x = countnoter(fruit.getId());
-            float xx = x / 5;
+            
+            float y =  counttt(fruit.getId());
+            float xx = x / y;
             System.out.println(xx);
             countnote.setText(String.valueOf(xx) + "/5");
         } catch (SQLException ex) {
@@ -469,6 +471,23 @@ public class Categorie_ClientController implements Initializable {
  
         return a;
        
+
+    }
+    
+      public Integer counttt(Integer produit) throws SQLException, JSONException, IOException {
+        Integer a = null;
+       
+    
+        int x = 0;
+        Statement stmt = cnx.createStatement();
+        String query = "select count(*) from rate where id_produit='" + produit + "'";
+
+        ResultSet rs = stmt.executeQuery(query);
+        rs.next();
+        a = rs.getInt(1);
+        return a;
+
+      
 
     }
 
@@ -953,7 +972,7 @@ public class Categorie_ClientController implements Initializable {
         //  fruits.removeAll(fruits);
 
         Produit fruit;
-        String tt = "SELECT * FROM `produits` where categorie='" + nom + "'";
+        String tt = "SELECT * FROM `produits` where id_categorie='" + nom + "'";
 
         Statement statement;
 
@@ -973,7 +992,7 @@ public class Categorie_ClientController implements Initializable {
             fruit.setImage(queryoutput.getString("image"));
             fruit.setPromotion(queryoutput.getString("promotion"));
             InterCategorie deptdao = daocategorie.getInstance();
-            fruit.setCat(deptdao.findcatById(queryoutput.getInt("categorie")));
+            fruit.setCat(deptdao.findcatById(queryoutput.getInt("id_categorie")));
             fruit.setDate(queryoutput.getString("date_exp"));
             fruit.setPrixold(queryoutput.getInt("prixold"));
             fruits.add(fruit);

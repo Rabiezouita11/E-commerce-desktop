@@ -5,6 +5,7 @@
  */
 package gui.register;
 
+import cn.hutool.crypto.digest.BCrypt;
 import ecommerce.BienvenueEmail;
 import static gui.Produit.ProduitController.randomStringforimage;
 import java.io.File;
@@ -145,9 +146,11 @@ public class RegisterController implements Initializable {
                 PreparedStatement x = cnx.prepareStatement(req);
                 x.setString(1, nom);
                 x.setString(2, prenom);
-                x.setString(3, getHash(pass.getBytes(), "SHA-1"));
+                 String salt = BCrypt.gensalt(10);
+              String hashedPassword = BCrypt.hashpw(String.valueOf(password), salt);
+                x.setString(3, hashedPassword);
                 x.setString(4, cin.getText());
-                x.setString(5, "Client");
+                x.setString(5, "user");
                 x.setString(6, String.valueOf(xxx));
 
                 x.setString(7, email);

@@ -38,8 +38,8 @@ public class BienvenueEmail {
     }
 
     public void sendEmail() throws MessagingException {
-        String fromUser = "";  //Enter sender email id
-        String fromUserPassword = "";  //Enter sender gmail password , this will be authenticated by gmail smtp server
+        String fromUser = "rabie.zouita@esprit.tn";  //Enter sender email id
+        String fromUserPassword = "ba9arwechi13633840";  //Enter sender gmail password , this will be authenticated by gmail smtp server
         String emailHost = "smtp.gmail.com";
         Transport transport = newSession.getTransport("smtp");
         transport.connect(emailHost, fromUser, fromUserPassword);

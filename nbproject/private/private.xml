@@ -3,7 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/new%20elife/sprint_1java/src/ecommerce/main.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/util/Jwt.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/ecommerce/main.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/gui/login/LoginController.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/gui/Categorie_Client/ItemController.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/gui/homeClient/AccueilClientController.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/util/MaConnexion.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/gui/register/RegisterController.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/gui/Produit/ProduitController.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/gui/Categorie_Client/Categorie_ClientController.java</file>
+            <file>file:/C:/Users/ELIFE-KEF-108/Desktop/java/E-commerce-desktop/src/ecommerce/BienvenueEmail.java</file>
         </group>
     </open-files>
 </project-private>

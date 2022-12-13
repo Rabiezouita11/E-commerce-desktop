@@ -19,7 +19,7 @@ import static javax.swing.JOptionPane.showMessageDialog;
 public class MaConnexion {
     
     //DB
-    final String URL = "jdbc:mysql://localhost:3306/elif";
+    final String URL = "jdbc:mysql://localhost:3306/ecommerce";
     final String USR  = "root";
     final String PWD = "";
     

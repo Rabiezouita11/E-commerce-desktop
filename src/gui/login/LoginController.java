@@ -129,11 +129,11 @@ public class LoginController implements Initializable {
         if (this.isValidated()) {
             PreparedStatement ps, ps2;
             ResultSet rs;
-            String query = "select * from users WHERE nom = ? and mot_de_passe = ?";
+            String query = "select * from users WHERE nom = ?";
             try {
                 ps = cnx.prepareStatement(query);
                 ps.setString(1, username.getText());
-                ps.setString(2, getHash(pass.getBytes(), "SHA-1"));
+             
 
                 rs = ps.executeQuery();
 
@@ -191,7 +191,7 @@ public class LoginController implements Initializable {
                         stage.show();
                         showMessageDialog(null, "Login successfuly");
 
-                    } else if (s1.equalsIgnoreCase("Client") ) {
+                    } else if (s1.equalsIgnoreCase("user") ) {
                         if (s3.equalsIgnoreCase("false")){
                               Notification.notificationSuccess("Bienvenue", rs.getString("nom"));
                         JSONObject payload = new JSONObject();
